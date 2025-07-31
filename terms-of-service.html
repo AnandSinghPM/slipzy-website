@@ -1,1 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Slipzy</title>
+    <meta name="description" content="Terms of Service for Slipzy receipt scanning app - Legal terms and conditions for using our mobile application.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+            text-align: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .receipt-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .logo h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .terms-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #FF6B35;
+        }
+
+        .toc h3 {
+            color: #FF6B35;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 8px;
+        }
+
+        .toc li {
+            margin: 5px 0;
+        }
+
+        .toc a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .toc a:hover {
+            color: #FF6B35;
+        }
+
+        h2 {
+            color: #FF6B35;
+            font-size: 1.8rem;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FFE5DB;
+            scroll-margin-top: 20px;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin: 25px 0 15px 0;
+            scroll-margin-top: 20px;
+        }
+
+        h4 {
+            color: #555;
+            font-size: 1.1rem;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 20px;
+            color: #555;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #FFE5DB 0%, #FFF2ED 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #FF6B35;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #FFF3CD 0%, #FFEAA7 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #FFC107;
+            margin: 20px 0;
+        }
+
+        .legal-notice {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-info {
+            background: #FF6B35;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .effective-date {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .navigation-bar {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #FF6B35;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #FFE5DB;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .terms-content {
+                padding: 25px;
+            }
+            
+            .header {
+                padding: 30px 15px;
+            }
+            
+            .logo h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .toc ul {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+        }
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: #FF6B35;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .caps-text {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="receipt-icon">📄</div>
+                <h1>Slipzy</h1>
+            </div>
+            <p class="tagline">Slips into Slipzy - so easy!</p>
+            <h2 style="color: white; border: none; margin: 20px 0 0 0; font-size: 1.5rem;">Terms of Service</h2>
+        </header>
+
+        <nav class="navigation-bar">
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/terms-of-service.html">Terms of Service</a>
+                <a href="mailto:support@slipzy.co">Contact</a>
+            </div>
+        </nav>
+
+        <div class="terms-content">
+            <div class="effective-date">
+                <strong>Effective Date:</strong> July 31, 2025<br>
+                <strong>Last Updated:</strong> July 31, 2025
+            </div>
+
+            <div class="toc">
+                <h3>📋 Table of Contents</h3>
+                <ul>
+                    <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+                    <li><a href="#description">2. Description of Service</a></li>
+                    <li><a href="#license">3. License to Use</a></li>
+                    <li><a href="#responsibilities">4. User Responsibilities</a></li>
+                    <li><a href="#third-party">5. Third-Party Integrations</a></li>
+                    <li><a href="#ip-rights">6. Intellectual Property</a></li>
+                    <li><a href="#privacy">7. Privacy and Data Protection</a></li>
+                    <li><a href="#disclaimers">8. Disclaimers & Liability</a></li>
+                    <li><a href="#indemnification">9. Indemnification</a></li>
+                    <li><a href="#termination">10. Termination</a></li>
+                    <li><a href="#governing-law">11. Governing Law</a></li>
+                    <li><a href="#changes">12. Changes to Terms</a></li>
+                    <li><a href="#additional">13. Additional Provisions</a></li>
+                    <li><a href="#app-store">14. App Store Terms</a></li>
+                    <li><a href="#contact">15. Contact Information</a></li>
+                </ul>
+            </div>
+
+            <h2 id="acceptance">1. Acceptance of Terms</h2>
+            <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and Slipzy.co ("Slipzy," "we," "us," or "our") governing your use of the Slipzy mobile application and related services (collectively, the "Service").</p>
+            
+            <div class="warning-box">
+                <strong>⚠️ Important:</strong> By downloading, installing, accessing, or using Slipzy, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Service.
+            </div>
+
+            <p>If you are under 18 years of age, you must have your parent or legal guardian read and agree to these Terms on your behalf before you use the Service.</p>
+
+            <h2 id="description">2. Description of Service</h2>
+            <p>Slipzy is a mobile application that enables users to:</p>
+            <ul>
+                <li>Scan and digitize physical receipts using device camera</li>
+                <li>Convert receipt images into professional PDF documents</li>
+                <li>Organize and view digitized receipts locally on their device</li>
+                <li>Share receipts through third-party platforms (WhatsApp, Google Drive)</li>
+                <li>Manage receipt collections without requiring user accounts</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>🔑 Key Service Characteristics:</strong>
+                <ul>
+                    <li><strong>Local Processing:</strong> All receipt processing occurs on your device</li>
+                    <li><strong>No Account Required:</strong> Service functions without user registration</li>
+                    <li><strong>Privacy-Focused:</strong> Minimal data collection with transparent practices</li>
+                    <li><strong>Offline Functionality:</strong> Core features work without internet connection</li>
+                </ul>
+            </div>
+
+            <h2 id="license">3. License to Use</h2>
+
+            <h3>3.1 Grant of License</h3>
+            <p>Subject to your compliance with these Terms, Slipzy grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to download, install, and use the Slipzy application on your personal mobile device solely for your personal or business expense tracking purposes.</p>
+
+            <h3>3.2 License Restrictions</h3>
+            <p><strong>You may NOT:</strong></p>
+            <ul>
+                <li>Copy, modify, distribute, sell, or lease any part of the Service</li>
+                <li>Reverse engineer, decompile, or attempt to extract source code</li>
+                <li>Remove, alter, or obscure any proprietary notices or branding</li>
+                <li>Use the Service for any commercial redistribution purposes</li>
+                <li>Create derivative works based on the Service</li>
+                <li>Access the Service through automated means (bots, scripts, etc.)</li>
+            </ul>
+
+            <h3>3.3 Ownership</h3>
+            <p>Slipzy retains all right, title, and interest in and to the Service, including all intellectual property rights. This license does not grant you any ownership rights in the Service.</p>
+
+            <h2 id="responsibilities">4. User Responsibilities and Acceptable Use</h2>
+
+            <h3>4.1 Responsible Use</h3>
+            <p>You agree to use the Service responsibly and in accordance with these Terms and applicable laws. You are solely responsible for:</p>
+            <ul>
+                <li>The content of receipts you scan and store</li>
+                <li>Ensuring you have the right to scan and digitize receipts</li>
+                <li>Compliance with your local tax and business regulations</li>
+                <li>Maintaining the security of your device and stored receipts</li>
+            </ul>
+
+            <h3>4.2 Prohibited Conduct</h3>
+            <p><strong>You agree NOT to use the Service to:</strong></p>
+            <ul>
+                <li>Scan or process documents containing illegal content</li>
+                <li>Violate any applicable laws, regulations, or third-party rights</li>
+                <li>Scan receipts or documents you do not have permission to digitize</li>
+                <li>Upload, transmit, or store malicious code or viruses</li>
+                <li>Attempt to interfere with or disrupt the Service</li>
+                <li>Engage in any activity that could harm Slipzy's reputation or operations</li>
+                <li>Use the Service to facilitate money laundering, tax evasion, or fraud</li>
+                <li>Scan documents containing personal information of others without consent</li>
+                <li>Violate any intellectual property rights of third parties</li>
+            </ul>
+
+            <h3>4.3 Content Standards</h3>
+            <p>When using Slipzy, you must ensure that any content you process:</p>
+            <ul>
+                <li>Does not contain illegal, harmful, or offensive material</li>
+                <li>Respects the privacy and rights of others</li>
+                <li>Complies with applicable data protection laws</li>
+                <li>Does not infringe on copyrights, trademarks, or other intellectual property</li>
+            </ul>
+
+            <h2 id="third-party">5. Third-Party Integrations</h2>
+
+            <h3>5.1 Third-Party Services</h3>
+            <p>Slipzy integrates with third-party services including:</p>
+            <ul>
+                <li><strong>Google Drive:</strong> For optional cloud backup functionality</li>
+                <li><strong>WhatsApp:</strong> For receipt sharing capabilities</li>
+                <li><strong>Firebase:</strong> For app analytics and crash reporting</li>
+            </ul>
+
+            <h3>5.2 Third-Party Terms</h3>
+            <p>Your use of third-party integrations is subject to their respective terms of service and privacy policies. Slipzy is not responsible for third-party services' availability, functionality, or data handling practices.</p>
+
+            <h3>5.3 No Endorsement</h3>
+            <p>Integration with third-party services does not constitute endorsement by Slipzy. We make no warranties regarding third-party services.</p>
+
+            <h2 id="ip-rights">6. Intellectual Property Rights</h2>
+
+            <h3>6.1 Slipzy's Rights</h3>
+            <p>The Service, including its design, functionality, code, logos, and trademarks, is owned by Slipzy and protected by intellectual property laws. The "Slipzy" name, logo, and "Slips into Slipzy - so easy!" tagline are trademarks of Slipzy.co.</p>
+
+            <h3>6.2 User Content</h3>
+            <ul>
+                <li><strong>Receipt Ownership:</strong> You retain ownership of your original receipts and documents</li>
+                <li><strong>Processing Rights:</strong> By using the Service, you grant Slipzy the right to process your receipt images solely for the purpose of providing PDF generation functionality</li>
+                <li><strong>No Content Access:</strong> Slipzy does not access, store, or analyze the content of your receipts beyond local processing</li>
+            </ul>
+
+            <h3>6.3 Feedback</h3>
+            <p>Any feedback, suggestions, or improvements you provide regarding the Service may be used by Slipzy without compensation or attribution.</p>
+
+            <h2 id="privacy">7. Privacy and Data Protection</h2>
+            <p>Your privacy is important to us. Our collection and use of information is governed by our <a href="/privacy-policy.html">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+
+            <div class="highlight-box">
+                <strong>🔒 Key Privacy Principles:</strong>
+                <ul>
+                    <li>Local processing with minimal data collection</li>
+                    <li>Transparent data practices</li>
+                    <li>User control over sharing and storage</li>
+                    <li>Compliance with GDPR, CCPA, and other applicable privacy laws</li>
+                </ul>
+            </div>
+
+            <h2 id="disclaimers">8. Disclaimers and Limitation of Liability</h2>
+
+            <h3>8.1 Service Disclaimer</h3>
+            <div class="legal-notice">
+                <p class="caps-text">The Service is provided "as is" and "as available" without warranties of any kind, express or implied. To the maximum extent permitted by law, Slipzy disclaims all warranties, including:</p>
+                <ul>
+                    <li>MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</li>
+                    <li>NON-INFRINGEMENT OF THIRD-PARTY RIGHTS</li>
+                    <li>ACCURACY, RELIABILITY, OR COMPLETENESS OF SERVICE</li>
+                    <li>UNINTERRUPTED OR ERROR-FREE OPERATION</li>
+                </ul>
+            </div>
+
+            <h3>8.2 OCR and Processing Disclaimer</h3>
+            <ul>
+                <li><strong>OCR Accuracy:</strong> We do not guarantee 100% accuracy in optical character recognition or data extraction from receipts</li>
+                <li><strong>Receipt Quality:</strong> Service performance depends on receipt image quality, lighting, and legibility</li>
+                <li><strong>Tax Compliance:</strong> Users are solely responsible for ensuring scanned receipts meet their tax, accounting, and business compliance requirements</li>
+                <li><strong>No Financial Advice:</strong> Slipzy does not provide tax, accounting, or financial advice</li>
+                <li><strong>Backup Responsibility:</strong> Users are responsible for creating backups of important receipts</li>
+            </ul>
+
+            <h3>8.3 Limitation of Liability</h3>
+            <div class="legal-notice">
+                <p class="caps-text">To the maximum extent permitted by law:</p>
+                <p><strong>Slipzy's total liability for all claims shall not exceed £50 (fifty British pounds) or the equivalent in your local currency.</strong></p>
+                <p class="caps-text">We shall not be liable for:</p>
+                <ul>
+                    <li>Indirect, incidental, consequential, or punitive damages</li>
+                    <li>Loss of profits, data, or business opportunities</li>
+                    <li>Damages resulting from third-party services or integrations</li>
+                    <li>Loss or corruption of stored receipts (users responsible for backups)</li>
+                    <li>Tax penalties or compliance issues arising from Service use</li>
+                </ul>
+            </div>
+
+            <h3>8.4 Force Majeure</h3>
+            <p>Slipzy shall not be liable for delays or failures due to circumstances beyond our reasonable control, including natural disasters, government actions, internet outages, or third-party service disruptions.</p>
+
+            <h2 id="indemnification">9. Indemnification</h2>
+            <p>You agree to defend, indemnify, and hold harmless Slipzy, its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising out of or relating to:</p>
+            <ul>
+                <li>Your use of the Service</li>
+                <li>Your violation of these Terms</li>
+                <li>Your violation of applicable laws or third-party rights</li>
+                <li>Content you process through the Service</li>
+                <li>Your negligence or misconduct</li>
+            </ul>
+
+            <h2 id="termination">10. Termination</h2>
+
+            <h3>10.1 Termination by User</h3>
+            <p>You may stop using the Service at any time by uninstalling the application from your device.</p>
+
+            <h3>10.2 Termination by Slipzy</h3>
+            <p>We may suspend or terminate your access to the Service immediately, without prior notice, if:</p>
+            <ul>
+                <li>You violate these Terms</li>
+                <li>We reasonably believe termination is necessary to protect Slipzy or other users</li>
+                <li>Required by law or government authority</li>
+                <li>The Service is discontinued</li>
+            </ul>
+
+            <h3>10.3 Effect of Termination</h3>
+            <p>Upon termination:</p>
+            <ul>
+                <li>Your license to use the Service immediately ends</li>
+                <li>You must stop using the Service and may delete the app</li>
+                <li>Locally stored receipts remain on your device</li>
+                <li>Provisions regarding liability, indemnification, and governing law survive termination</li>
+            </ul>
+
+            <h2 id="governing-law">11. International Use and Governing Law</h2>
+
+            <h3>11.1 Global Service</h3>
+            <p>Slipzy is designed for international use and complies with applicable laws in major jurisdictions including the UK, USA, European Union, and India.</p>
+
+            <h3>11.2 Governing Law</h3>
+            <ul>
+                <li><strong>For Users in the European Union:</strong> These Terms are governed by the laws of Ireland</li>
+                <li><strong>For Users in the United Kingdom:</strong> These Terms are governed by the laws of England and Wales</li>
+                <li><strong>For Users in India:</strong> These Terms are governed by the laws of India</li>
+                <li><strong>For Users in the United States:</strong> These Terms are governed by the laws of Delaware, USA</li>
+                <li><strong>For All Other Users:</strong> These Terms are governed by the laws of India</li>
+            </ul>
+
+            <h3>11.3 Dispute Resolution</h3>
+            <p><strong>Preferred Resolution:</strong> We encourage resolving disputes informally by contacting support@slipzy.co.</p>
+
+            <p><strong>Formal Disputes:</strong></p>
+            <ul>
+                <li><strong>EU Users:</strong> Disputes may be resolved through EU alternative dispute resolution platforms</li>
+                <li><strong>UK Users:</strong> Subject to jurisdiction of England and Wales courts</li>
+                <li><strong>Indian Users:</strong> Subject to jurisdiction of Bangalore courts</li>
+                <li><strong>US Users:</strong> Subject to jurisdiction of Delaware courts</li>
+                <li><strong>Other Users:</strong> Subject to jurisdiction of Bangalore courts</li>
+            </ul>
+
+            <h3>11.4 Consumer Rights</h3>
+            <p>Nothing in these Terms limits your statutory consumer rights under applicable law.</p>
+
+            <h2 id="changes">12. Changes to Terms</h2>
+
+            <h3>12.1 Modification Rights</h3>
+            <p>We may modify these Terms at any time to reflect:</p>
+            <ul>
+                <li>Changes in applicable law</li>
+                <li>New features or functionality</li>
+                <li>Improved user protections</li>
+                <li>Business operational needs</li>
+            </ul>
+
+            <h3>12.2 Notice of Changes</h3>
+            <p><strong>Material Changes:</strong> We will provide 30 days' notice through:</p>
+            <ul>
+                <li>In-app notification</li>
+                <li>Email notification (if you've provided contact information)</li>
+                <li>Posting on our website</li>
+            </ul>
+            <p><strong>Minor Changes:</strong> May be effective immediately upon posting.</p>
+
+            <h3>12.3 Continued Use</h3>
+            <p>Your continued use of the Service after changes take effect constitutes acceptance of the modified Terms.</p>
+
+            <h2 id="additional">13. Additional Provisions</h2>
+
+            <h3>13.1 Entire Agreement</h3>
+            <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and Slipzy regarding the Service.</p>
+
+            <h3>13.2 Severability</h3>
+            <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect.</p>
+
+            <h3>13.3 Waiver</h3>
+            <p>Slipzy's failure to enforce any provision of these Terms does not constitute a waiver of that provision or any other provision.</p>
+
+            <h3>13.4 Assignment</h3>
+            <p>You may not assign or transfer your rights under these Terms. Slipzy may assign these Terms in connection with a merger, acquisition, or sale of assets.</p>
+
+            <h3>13.5 Language</h3>
+            <p>These Terms are originally written in English. Any translations are provided for convenience only, and the English version shall prevail in case of conflicts.</p>
+
+            <h2 id="app-store">14. App Store Terms</h2>
+
+            <h3>14.1 Google Play Store</h3>
+            <p>If you downloaded Slipzy from Google Play Store, you acknowledge that:</p>
+            <ul>
+                <li>Google is not a party to these Terms</li>
+                <li>Google has no responsibility or liability regarding the Service</li>
+                <li>Google is a third-party beneficiary with the right to enforce these Terms</li>
+            </ul>
+
+            <h3>14.2 Apple App Store (if applicable)</h3>
+            <p>If you downloaded Slipzy from Apple App Store, you acknowledge that:</p>
+            <ul>
+                <li>Apple is not a party to these Terms</li>
+                <li>Apple has no responsibility for the Service or these Terms</li>
+                <li>Apple and its subsidiaries are third-party beneficiaries of these Terms</li>
+            </ul>
+
+            <h2 id="contact">15. Contact Information</h2>
+            <p><strong>For questions about these Terms, please contact us:</strong></p>
+        </div>
+
+        <div class="contact-info">
+            <h3>📞 Contact Information</h3>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    support@slipzy.co<br>
+                    <em>Subject: "Terms of Service Inquiry"</em>
+                </div>
+                <div class="contact-item">
+                    <strong>Mailing Address:</strong>
+                    Slipzy.co<br>
+                    Flat 139D, DS Max Sigma Nest,<br>
+                    Gollahalli, EC phase1,<br>
+                    Bangalore, Karnataka, 560100<br>
+                    India
+                </div>
+            </div>
+            <p style="margin-top: 20px; opacity: 0.9;"><strong>Response Time:</strong> We will respond to inquiries within 7 business days.</p>
+        </div>
+
+        <div class="highlight-box" style="margin: 30px 0; text-align: center; background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%); border-left-color: #28a745;">
+            <p><strong>✅ By using Slipzy, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</strong></p>
+            <p style="margin-top: 15px; font-style: italic;">Slips into Slipzy - so easy! 📄✨</p>
+        </div>
+
+        <footer class="footer">
+            <p><em>These Terms of Service were last updated on July 31, 2025. We encourage you to review these terms periodically to stay informed about your rights and obligations.</em></p>
+            <p style="margin-top: 10px;">© 2025 Slipzy.co - All rights reserved</p>
+            <p style="margin-top: 15px;">
+                <a href="/">Home</a> | 
+                <a href="/privacy-policy.html">Privacy Policy</a> | 
+                <a href="mailto:support@slipzy.co">Contact Support</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
