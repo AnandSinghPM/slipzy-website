@@ -1,0 +1,34 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F08E34;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E07B1F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" 
+          fill="url(#logoGradient)" 
+          stroke="#E07B1F" 
+          stroke-width="1"/>
+  <!-- Inner highlight -->
+  <circle cx="16" cy="16" r="12" 
+          fill="white" 
+          opacity="0.1"/>
+  <!-- Simplified receipt -->
+  <rect x="10" y="8" width="12" height="16" rx="1" 
+        fill="white" 
+        opacity="0.95"/>
+  <!-- Receipt corner -->
+  <path d="M19,8 L19,11 L22,11" 
+        fill="#FBEFE6"/>
+  <!-- Receipt text lines -->
+  <line x1="12" y1="12" x2="18" y2="12" stroke="#F08E34" stroke-width="1"/>
+  <line x1="12" y1="14" x2="17" y2="14" stroke="#F08E34" stroke-width="1"/>
+  <line x1="12" y1="16" x2="19" y2="16" stroke="#F08E34" stroke-width="1"/>
+  <line x1="12" y1="18" x2="16" y2="18" stroke="#F08E34" stroke-width="1"/>
+  <!-- Serrated bottom -->
+  <path d="M10,24 L11,25 L12,24 L13,25 L14,24 L15,25 L16,24 L17,25 L18,24 L19,25 L20,24 L21,25 L22,24" 
+        stroke="white" 
+        stroke-width="1" 
+        fill="none"/>
+</svg>
