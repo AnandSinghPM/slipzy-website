@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,326 +36,6 @@
     
     <!-- Main CSS (same as your site) -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    
-    <!-- Contact Page Specific Styles -->
-    <style>
-        /* Contact Page Specific Styles */
-        .contact-hero {
-            padding: 8rem 0 4rem 0;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .contact-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .contact-hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .contact-hero .subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
-        }
-
-        .contact-hero .description {
-            font-size: 1.125rem;
-            opacity: 0.8;
-        }
-
-        .contact-main {
-            padding: 4rem 0;
-            background: var(--color-background);
-        }
-
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Status Messages */
-        .status-message {
-            padding: 1rem 1.25rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            display: none;
-            font-size: 0.875rem;
-            border: 1px solid;
-        }
-
-        .status-success {
-            background-color: #ecfdf5;
-            border-color: #bbf7d0;
-            color: #065f46;
-        }
-
-        .status-error {
-            background-color: #fef2f2;
-            border-color: #fecaca;
-            color: #991b1b;
-        }
-
-        /* Form Container */
-        .form-container {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        /* Form Elements */
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-label {
-            display: block;
-            font-weight: 600;
-            color: var(--color-text);
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-        }
-
-        .form-input,
-        .form-select,
-        .form-textarea {
-            width: 100%;
-            padding: 0.875rem 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            font-size: 1rem;
-            transition: all 0.2s ease;
-            background-color: white;
-            font-family: inherit;
-        }
-
-        .form-input:focus,
-        .form-select:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: var(--color-primary);
-            box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.1);
-        }
-
-        .form-input.error,
-        .form-select.error,
-        .form-textarea.error {
-            border-color: #ef4444;
-            box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .error-message {
-            color: #ef4444;
-            font-size: 0.875rem;
-            margin-top: 0.5rem;
-            display: none;
-        }
-
-        .character-counter {
-            text-align: right;
-            font-size: 0.875rem;
-            color: var(--color-text-muted);
-            margin-top: 0.25rem;
-        }
-
-        .character-counter.warning {
-            color: var(--color-primary);
-        }
-
-        /* Submit Button */
-        .submit-btn {
-            width: 100%;
-            background: var(--color-primary);
-            color: white;
-            border: none;
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .submit-btn:hover:not(:disabled) {
-            background: var(--color-primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(var(--color-primary-rgb), 0.3);
-        }
-
-        .submit-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .loading-spinner {
-            width: 16px;
-            height: 16px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: white;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .privacy-note {
-            text-align: center;
-            font-size: 0.875rem;
-            color: var(--color-text-muted);
-            margin-top: 1rem;
-        }
-
-        /* Contact Info Cards */
-        .contact-info-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .contact-info-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-info-card h2 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--color-text);
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .contact-icon {
-            width: 24px;
-            height: 24px;
-            color: var(--color-primary);
-            flex-shrink: 0;
-        }
-
-        .contact-item h3 {
-            font-weight: 600;
-            color: var(--color-text);
-            margin-bottom: 0.25rem;
-            font-size: 0.875rem;
-        }
-
-        .contact-item p {
-            color: var(--color-text-muted);
-            font-size: 0.875rem;
-        }
-
-        .contact-item a {
-            color: var(--color-primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer Note */
-        .footer-note {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            border-radius: 12px;
-            padding: 1.25rem;
-            margin-top: 2rem;
-        }
-
-        .footer-note p {
-            font-size: 0.875rem;
-            color: #1e40af;
-            margin: 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .contact-hero {
-                padding: 6rem 0 3rem 0;
-            }
-
-            .contact-hero h1 {
-                font-size: 2.25rem;
-            }
-
-            .contact-main {
-                padding: 3rem 0;
-            }
-
-            .contact-container {
-                padding: 0 1rem;
-            }
-
-            .form-container,
-            .contact-info-card {
-                padding: 2rem 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .contact-hero h1 {
-                font-size: 2rem;
-            }
-
-            .form-container,
-            .contact-info-card {
-                padding: 1.5rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation (Same as your main site) -->
@@ -379,7 +58,7 @@
                         </div>
                     </div>
                     <div class="logo-text">
-                        <h1 class="brand-name"><a href="index.html" style="text-decoration: none; color: inherit;">Slipzy</a></h1>
+                        <h1 class="brand-name"><a href="index.html" class="brand-link">Slipzy</a></h1>
                         <p class="brand-tagline">Slips into Slipzy - so easy!</p>
                     </div>
                 </div>
@@ -418,140 +97,236 @@
     </nav>
 
     <!-- Contact Hero Section -->
-    <section class="contact-hero">
-        <div class="contact-hero-content">
-            <h1>Contact Us</h1>
-            <p class="subtitle">Have a question, feedback, or need help? We're here to assist you.</p>
-            <p class="description">Send us a message and we'll get back to you within 24 hours</p>
+    <section class="contact-hero section">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="contact-hero-title">Contact Us</h1>
+                <p class="contact-hero-subtitle">Have a question, feedback, or need help? We're here to assist you.</p>
+                <p class="contact-hero-description">Send us a message and we'll get back to you within 24 hours</p>
+            </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <section class="contact-main">
-        <div class="contact-container">
-            <!-- Status Messages -->
-            <div id="success-message" class="status-message status-success">
-                <strong>Thank you!</strong> Your message has been sent to our support team. We'll respond within 24 hours.
+    <!-- Contact Form Section -->
+    <section class="contact-form-section section">
+        <div class="container">
+            <div class="contact-form-container">
+                
+                <!-- Status Messages -->
+                <div id="success-message" class="status-message status-success">
+                    <div class="status-icon">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <div class="status-content">
+                        <strong>Thank you!</strong> Your message has been sent to our support team. We'll respond within 24 hours.
+                    </div>
+                </div>
+
+                <div id="error-message" class="status-message status-error">
+                    <div class="status-icon">
+                        <i data-lucide="alert-circle"></i>
+                    </div>
+                    <div class="status-content">
+                        <strong>Error:</strong> There was an issue sending your message. Please try again or email us directly at support@slipzy.co
+                    </div>
+                </div>
+
+                <!-- Contact Form Card -->
+                <div class="contact-form-card card">
+                    <form id="contact-form" class="contact-form" action="mailto:support@slipzy.co" method="post" enctype="text/plain">
+                        
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">Full Name *</label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                name="fullName" 
+                                class="form-input" 
+                                placeholder="Your full name"
+                                required
+                            >
+                            <div id="fullName-error" class="form-error">Full name is required</div>
+                        </div>
+
+                        <!-- Email Address -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="your.email@company.com"
+                                required
+                            >
+                            <div id="email-error" class="form-error">Please enter a valid email address</div>
+                        </div>
+
+                        <!-- Subject -->
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select id="subject" name="subject" class="form-select" required>
+                                <option value="">Select a subject...</option>
+                                <option value="product-feedback">Product Feedback</option>
+                                <option value="bug-report">Bug Report</option>
+                                <option value="feature-request">Feature Request</option>
+                                <option value="technical-support">Technical Support</option>
+                                <option value="general-question">General Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div id="subject-error" class="form-error">Please select a subject</div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-textarea" 
+                                placeholder="Describe your question or feedback in detail..."
+                                maxlength="500"
+                                required
+                            ></textarea>
+                            <div class="form-meta">
+                                <div class="character-counter" id="char-counter">0/500 characters</div>
+                            </div>
+                            <div id="message-error" class="form-error">Message is required</div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-large contact-submit-btn" id="submit-btn">
+                                <span id="btn-text">Send Message</span>
+                                <i data-lucide="send" id="btn-icon"></i>
+                                <div id="loading-spinner" class="loading-spinner"></div>
+                            </button>
+                            <p class="form-privacy-note">Your message is sent securely to our support team</p>
+                        </div>
+
+                    </form>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div id="error-message" class="status-message status-error">
-                <strong>Error:</strong> There was an issue sending your message. Please try again or email us directly at support@slipzy.co
-            </div>
-
-            <!-- Contact Form -->
-            <div class="form-container">
-                <form id="contact-form" action="mailto:support@slipzy.co" method="post" enctype="text/plain">
-                    <!-- Full Name -->
-                    <div class="form-group">
-                        <label for="fullName" class="form-label">Full Name *</label>
-                        <input 
-                            type="text" 
-                            id="fullName" 
-                            name="fullName" 
-                            class="form-input" 
-                            placeholder="Your full name"
-                            required
-                        >
-                        <div id="fullName-error" class="error-message">Full name is required</div>
-                    </div>
-
-                    <!-- Email Address -->
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email Address *</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            class="form-input" 
-                            placeholder="your.email@company.com"
-                            required
-                        >
-                        <div id="email-error" class="error-message">Please enter a valid email address</div>
-                    </div>
-
-                    <!-- Subject -->
-                    <div class="form-group">
-                        <label for="subject" class="form-label">Subject *</label>
-                        <select id="subject" name="subject" class="form-select" required>
-                            <option value="">Select a subject...</option>
-                            <option value="product-feedback">Product Feedback</option>
-                            <option value="bug-report">Bug Report</option>
-                            <option value="feature-request">Feature Request</option>
-                            <option value="technical-support">Technical Support</option>
-                            <option value="general-question">General Question</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <div id="subject-error" class="error-message">Please select a subject</div>
-                    </div>
-
-                    <!-- Message -->
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message *</label>
-                        <textarea 
-                            id="message" 
-                            name="message" 
-                            class="form-textarea" 
-                            placeholder="Describe your question or feedback in detail..."
-                            maxlength="500"
-                            required
-                        ></textarea>
-                        <div class="character-counter" id="char-counter">0/500 characters</div>
-                        <div id="message-error" class="error-message">Message is required</div>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" class="submit-btn" id="submit-btn">
-                        <span id="btn-text">Send Message</span>
-                        <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
-                    </button>
-
-                    <!-- Privacy Note -->
-                    <p class="privacy-note">
-                        Your message is sent securely to our support team
-                    </p>
-                </form>
-            </div>
-
-            <!-- Contact Information -->
+    <!-- Contact Info Section -->
+    <section class="contact-info-section section">
+        <div class="container">
             <div class="contact-info-grid">
-                <div class="contact-info-card">
-                    <h2>Contact Information</h2>
+                
+                <!-- Contact Information Card -->
+                <div class="contact-info-card card">
+                    <h2 class="contact-info-title">Contact Information</h2>
                     
-                    <div class="contact-item">
-                        <i data-lucide="mail" class="contact-icon"></i>
-                        <div>
-                            <h3>Email Support</h3>
-                            <p><a href="mailto:support@slipzy.co">support@slipzy.co</a></p>
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h3>Email Support</h3>
+                                <p><a href="mailto:support@slipzy.co" class="contact-link">support@slipzy.co</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h3>Response Time</h3>
+                                <p>We typically respond within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i data-lucide="calendar"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h3>Business Hours</h3>
+                                <p>Monday - Friday, 9 AM - 6 PM EST</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="contact-item">
-                        <i data-lucide="clock" class="contact-icon"></i>
-                        <div>
-                            <h3>Response Time</h3>
-                            <p>We typically respond within 24 hours</p>
+                <!-- Tech Support Note Card -->
+                <div class="tech-support-card card">
+                    <div class="tech-support-icon">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <div class="tech-support-content">
+                        <h3>Technical Issues?</h3>
+                        <p>Please include your device model and Android version to help us assist you faster.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="logo-svg">
+                                <path d="M4,3 L16,3 L16,5 L18,5 L18,18 L4,18 Z" stroke="currentColor" stroke-width="1.5" fill="white" fill-opacity="0.2"/>
+                                <path d="M16,3 L16,5 L18,5" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity="0.3"/>
+                                <line x1="6" y1="7" x2="14" y2="7" stroke="currentColor" stroke-width="1"/>
+                                <line x1="6" y1="9" x2="15" y2="9" stroke="currentColor" stroke-width="1"/>
+                                <line x1="6" y1="11" x2="13" y2="11" stroke="currentColor" stroke-width="1"/>
+                                <path d="M4,18 L5,19 L6,18 L7,19 L8,18 L9,19 L10,18 L11,19 L12,18 L13,19 L14,18 L15,19 L16,18 L17,19 L18,18" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <h3 class="footer-brand-name">Slipzy</h3>
+                            <p class="footer-tagline">Slips into Slipzy - so easy!</p>
                         </div>
                     </div>
+                    <p class="footer-description">The smart receipt management solution for business travelers. Transform paper receipts into professional PDFs instantly.</p>
+                </div>
 
-                    <div class="contact-item">
-                        <i data-lucide="clock" class="contact-icon"></i>
-                        <div>
-                            <h3>Business Hours</h3>
-                            <p>Monday - Friday, 9 AM - 6 PM EST</p>
-                        </div>
+                <!-- Links -->
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Product</h4>
+                        <ul class="footer-link-list">
+                            <li><a href="index.html#features" class="footer-link">Features</a></li>
+                            <li><a href="index.html#how-it-works" class="footer-link">How It Works</a></li>
+                            <li><a href="index.html#security" class="footer-link">Security</a></li>
+                            <li><a href="index.html#download" class="footer-link">Download</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Support</h4>
+                        <ul class="footer-link-list">
+                            <li><a href="#" class="footer-link">Help Center</a></li>
+                            <li><a href="contact-us.html" class="footer-link">Contact Us</a></li>
+                            <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                            <li><a href="terms-of-service.html" class="footer-link">Terms of Service</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Footer Note -->
-            <div class="footer-note">
-                <p><strong>For technical issues:</strong> Please include your device model and Android version to help us assist you faster.</p>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 Slipzy. All rights reserved.</p>
+                <p class="footer-made">Made for business travelers worldwide</p>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- Contact Form JavaScript -->
+    <!-- Scripts -->
     <script src="assets/js/contact-form.js"></script>
+    <script src="assets/js/script.js"></script>
     
     <!-- Initialize Lucide Icons -->
     <script>
